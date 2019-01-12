@@ -19,6 +19,8 @@ jobs:
         - brew update
         # Run bundler and install the dependencies in vendor/bundle
         # so that it can be cached.
+        - rvm use 2.5 --install --binary --fuzzy
+        - gem install bundler --no-ri --no-rdoc
         - bundle install --deployment 
       install:
         # Install stack
@@ -57,6 +59,8 @@ jobs:
         - brew update
         # Run bundler and install the dependencies in vendor/bundle
         # so that it can be cached.
+        - rvm use 2.5 --install --binary --fuzzy
+        - gem install bundler --no-ri --no-rdoc
         - bundle install --deployment 
       install:
         # Install stack
